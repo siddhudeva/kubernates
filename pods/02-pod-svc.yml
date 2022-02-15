@@ -1,1 +1,21 @@
-# hello world
+appVersion: v1
+kind: Pod
+metadata:
+  name: sampled
+  labels: nginx  # with this label only the service will attach to this pod
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-serv
+spec:
+  selector:
+    app: nginx   #here we have to mention the labels name
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
