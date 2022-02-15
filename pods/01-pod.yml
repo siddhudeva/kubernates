@@ -8,13 +8,13 @@ spec:
       image: nginx
 ---
 #Multi container
-apiVersion: v1
-kind: Pod
-metadata:
-  name: nginx2
-spec:
-  containers:
-    - name: sample1
-      image: nginx
-    - name: sample2
-      image: nginx
+#apiVersion: v1
+#kind: Pod
+#metadata:
+#  name: nginx2
+#spec:
+#  containers:
+#    - name: sample1
+#      image: nginx
+#    - name: sample2
+#      image: nginx
