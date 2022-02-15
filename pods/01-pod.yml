@@ -1,17 +1,17 @@
-#apiVersion: v1
-#kind: Pod
-#metadata:
-#  name: nginx
-#spec:
-#  containers:
-#    - name: nginx
-#      image: nginx
-#---
-#Multi container
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx_multi
+  name: nginx
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+---
+Multi container
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx2
 spec:
   containers:
     - name: sample1
