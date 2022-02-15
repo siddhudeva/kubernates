@@ -7,7 +7,7 @@
 #    - name: nginx
 #      image: nginx
 #---
-#Multi containers
+#Multi container
 apiVersion: v1
 kind: Pod
 metadata:
