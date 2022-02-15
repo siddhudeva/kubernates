@@ -6,7 +6,7 @@
 #  containers:
 #    - name: nginx
 #      image: nginx
-#---
+
 #Multi container
 apiVersion: v1
 kind: Pod
