@@ -7,7 +7,7 @@ spec:
     - name: nginx
       image: nginx
 ---
-#Multi container
+#Multi containers
 apiVersion: v1
 kind: Pod
 metadata:
