@@ -1,20 +1,20 @@
-apiVersion: v1
-kind: Pod
-metadata:
-  name: nginx
-spec:
-  containers:
-    - name: nginx
-      image: nginx
----
-#Multi container
 #apiVersion: v1
 #kind: Pod
 #metadata:
-#  name: nginx2
+#  name: nginx
 #spec:
 #  containers:
-#    - name: sample1
+#    - name: nginx
 #      image: nginx
-#    - name: sample2
-#      image: nginx
+#---
+#Multi container
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx2
+spec:
+  containers:
+    - name: sample1
+      image: nginx:1.16
+    - name: sample2
+      image: centos:7
