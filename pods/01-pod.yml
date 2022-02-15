@@ -6,3 +6,13 @@ spec:
   containers:
     - name: nginx
       image: nginx
+---
+#Multi container
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx2
+spec:
+  containers:
+    - name: nginx2
+      image: nginx
