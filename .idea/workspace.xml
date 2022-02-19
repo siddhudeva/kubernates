@@ -43,7 +43,21 @@
       <option name="project" value="LOCAL" />
       <updated>1645271350592</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Dockerfile is created">
+      <created>1645272166180</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1645272166180</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Dockerfile is created">
+      <created>1645272239752</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1645272239752</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
