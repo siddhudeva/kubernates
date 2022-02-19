@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample4
+spec:
+  containers:
+    - image: nginx
+      name: nginx
+# here we are going to mention variables and we can see them using kubectl exec -it <filename> -- env
+#you will get default env variables and your variables also
+      env:
+        - name: URL
+          value: google.com
+        - name: URL2
+          valueFrom:
+            secretKeyRef:
+              name: sample-secret
+              key: URL2
+# mentioning one by one is a big pain thats why envFrom config comes into picture. it will do
+      envFrom:    # check in internet envfrom kubernetes
+        - configMapRef:
+            name: special-config
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sample-data
+data:
+  URL1: example.com
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: sample-secret
+data:
+  URL2: example.com   # here is.. example.com is the secret here so if i want to encrypt in a format that my system will understand so
+# we use echo example.com | base64   base64 will do the encryption

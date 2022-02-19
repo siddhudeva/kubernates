@@ -1,0 +1,17 @@
+## in containers we use two types of health checks one is Liveness check and another one is readiness check
+## Liveness check is the one which go and check the container while it is in running state.so here we are using HTTP probe. as long as it gets 200 response so it says healthy
+#if the error code is 400 series then this probe goes and restart the container again
+#readiness probe check is the one which will check the health check then only you want to start then readiness probe is comes into picture. when it is the begging stage
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample5
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      livenessprobe:
+        httpGet:
+          path: /
+        initialDelaySeconds: 5
+        periodSeconds: 5

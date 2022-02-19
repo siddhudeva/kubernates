@@ -1,8 +1,9 @@
-appVersion: v1
+apiVersion: v1
 kind: Pod
 metadata:
   name: sampled
-  labels: nginx  # with this label only the service will attach to this pod
+  labels:
+    app: nginx  # with this label only the service will attach to this pod
 spec:
   containers:
     - name: nginx

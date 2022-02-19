@@ -1,0 +1,52 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample3
+spec:
+  containers:
+    - image: nginx
+      name: nginx
+      volumeMounts:
+        - mountpath: /opt
+          name: hostname-volume
+  volumes:
+  - name: hostname-volume
+    hostpath:
+        #directory location on host
+       path: /opt/opt-data
+        #this field is optical
+       type: Directory
+#---
+#kind: PresistentVolumeClaim
+#apiVersion: v1
+#metadata:
+#  name: ebs1
+#spec:
+#  storageClassName: aws-gp2
+#  accessModes:
+#    -ReadWriteOnce
+#  resources:
+#    requests:
+#      storage: 1Gi
+
+# if we apply like this using kubectl apply -f 03-pod-storage.yml this is will create and the status is pending
+# why means it has to consume (i.e., we have to store or use the application so the data will be saved)
+---
+kind: Pod
+apiVeresion: v1
+metadata:
+  name: sample8
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      volumeMounts:
+        - mountpath: "/opt"
+          name: ebs1
+  volumes:
+    - name: ebs1
+#      persistentVolumeClaim:
+#        claimName: ebs1
+      awsElasticBlockStore:
+        volumeID: "<volumeid>"
+        fsType: ext4
