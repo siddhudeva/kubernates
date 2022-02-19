@@ -1,5 +1,5 @@
 #dockerfile creation
 
 FROM        nginx
-RUN         rm -rf /usr/share/nginx/hmtl/*
-RUN         echo helloworld > /usr/share/nginx/hmtl/index.html
+RUN         rm -rf /usr/share/nginx/html/*
+RUN         echo helloworld > /usr/share/nginx/html/index.html
