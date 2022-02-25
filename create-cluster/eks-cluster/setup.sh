@@ -5,3 +5,6 @@ curl -s https://raw.githubusercontent.com/linuxautomations/labautomation/master/
 curl https://raw.githubusercontent.com/linuxautomations/labautomation/master/tools/eksctl/install.sh | sudo bash
 
 eksctl create cluster --name sample2 --region us-east-1 --managed --zones us-east-1a,us-east-1b
+
+
+#nel

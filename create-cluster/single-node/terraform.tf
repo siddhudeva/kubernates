@@ -53,3 +53,4 @@ output "MINIKUBE_SERVER" {
 output "KUBE_CONFIG" {
   value = "scp centos@${module.minikube.public_ip}:/home/centos/kubeconfig ~/.kube/config"
 }
+#hekk
